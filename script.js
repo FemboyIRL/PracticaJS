@@ -8,7 +8,7 @@ const formCourse = document.querySelector('#formCourse')
 const cajaInfo = document.querySelector('.cajaInfo')
 const imgMin = document.querySelector('.imgMin')
 const center1 = document.querySelector('.center1')
-
+const min = document.querySelector('.min')
 //-- FUNCIONES --//
 
 function actualizarCurso(e){
@@ -22,7 +22,12 @@ function actualizarCurso(e){
 
 
 function actualizarImagen(e){
-    center1.style.backgroundImage = `url('${e.target.src}')`;
+    if(e.target.src == null){
+        return
+    }else{
+        center1.style.backgroundImage = `url('${e.target.src}')`;
+    }
+
 }
 
 //-- EVENTOS --//
